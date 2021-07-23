@@ -339,6 +339,7 @@ the inbox.  Refile to `org-gtd-actionable-file-basename'."
   (org-gtd--clarify-item)
   (goto-char (point-min))
   (org-set-tags-command)
+  (org-priority)
   (org-schedule 0)
   (org-refile nil nil (org-gtd--refile-target org-gtd-scheduled)))
 
@@ -453,6 +454,7 @@ the inbox.  Mark it as done and archive."
   (org-gtd--clarify-item)
   (goto-char (point-min))
   (org-set-tags-command)
+  (org-priority)
   (org-todo "DONE")
   (org-archive-subtree))
 
